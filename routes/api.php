@@ -8,13 +8,14 @@ use App\Http\Controllers\Api\ImportArticleController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/user', fn (Request $request) => $request->user())->middleware('auth:sanctum');
-
+Route::get('/user', fn(Request $request) => $request->user())->middleware('auth:sanctum');
 
 Route::post('/import-articles', ImportArticleController::class);
 
 Route::get('/categories', CategoryController::class);
 
-Route::apiResources([
-    'articles' => ArticleController::class,
-]);
+Route::prefix('articles')->group(function () {
+    Route::get('/', [ArticleController::class, 'index']);
+
+    Route::get('/{id}', [ArticleController::class, 'show']);
+});
