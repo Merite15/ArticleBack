@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Http\Controllers\Api;
 
 use App\Http\Controllers\Controller;
@@ -32,13 +34,13 @@ class ImportArticleController extends Controller
                     'title' => $data['title'],
                     'content' => $data['content'][0]['content'] ?? '',
                     'featured_media' => $data['media'][0]['media']['attributes']['url'] ?? null,
-                    'primary_category_id' => $category->id
-                ]
+                    'primary_category_id' => $category->id,
+                ],
             );
 
             foreach ($data['categories']['additional'] as $additionalCategoryName) {
                 $additionalCategory = Category::firstOrCreate(
-                    ['name' => $additionalCategoryName]
+                    ['name' => $additionalCategoryName],
                 );
 
                 $article->categories()->syncWithoutDetaching([$additionalCategory->id]);
