@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\Models\Article;
-use App\Http\Requests\StoreArticleRequest;
-use App\Http\Requests\UpdateArticleRequest;
+use App\Models\ArticleCategory;
+use App\Http\Requests\StoreArticleCategoryRequest;
+use App\Http\Requests\UpdateArticleCategoryRequest;
 
-class ArticleController extends Controller
+class ArticleCategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +27,7 @@ class ArticleController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreArticleRequest $request)
+    public function store(StoreArticleCategoryRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class ArticleController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Article $article)
+    public function show(ArticleCategory $articleCategory)
     {
         //
     }
@@ -43,7 +43,7 @@ class ArticleController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Article $article)
+    public function edit(ArticleCategory $articleCategory)
     {
         //
     }
@@ -51,7 +51,7 @@ class ArticleController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateArticleRequest $request, Article $article)
+    public function update(UpdateArticleCategoryRequest $request, ArticleCategory $articleCategory)
     {
         //
     }
@@ -59,7 +59,7 @@ class ArticleController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Article $article)
+    public function destroy(ArticleCategory $articleCategory)
     {
         //
     }

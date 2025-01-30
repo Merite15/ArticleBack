@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Api;
 
-use App\Models\ArticleCategory;
-use App\Http\Requests\StoreArticleCategoryRequest;
-use App\Http\Requests\UpdateArticleCategoryRequest;
+use App\Models\Category;
+use App\Http\Requests\StoreCategoryRequest;
+use App\Http\Requests\UpdateCategoryRequest;
 
-class ArticleCategoryController extends Controller
+class CategoryController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -27,7 +27,7 @@ class ArticleCategoryController extends Controller
     /**
      * Store a newly created resource in storage.
      */
-    public function store(StoreArticleCategoryRequest $request)
+    public function store(StoreCategoryRequest $request)
     {
         //
     }
@@ -35,7 +35,7 @@ class ArticleCategoryController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(ArticleCategory $articleCategory)
+    public function show(Category $category)
     {
         //
     }
@@ -43,7 +43,7 @@ class ArticleCategoryController extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(ArticleCategory $articleCategory)
+    public function edit(Category $category)
     {
         //
     }
@@ -51,7 +51,7 @@ class ArticleCategoryController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateArticleCategoryRequest $request, ArticleCategory $articleCategory)
+    public function update(UpdateCategoryRequest $request, Category $category)
     {
         //
     }
@@ -59,7 +59,7 @@ class ArticleCategoryController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(ArticleCategory $articleCategory)
+    public function destroy(Category $category)
     {
         //
     }
